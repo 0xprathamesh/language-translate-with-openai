@@ -28,6 +28,7 @@ export default function Home() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY }`,
       },
       body: JSON.stringify({
         prompt: `${input}\n\nTranslate this text to ${selectedLanguage}`
@@ -58,7 +59,7 @@ export default function Home() {
         <h1 className='text-3xl font-bold tracking-wide'>Multilingual AI</h1>
       </div>
       <div className='flex flex-col items-center justify-center '>
-        <textarea onChange={handleInput} placeholder='Input Text to Translate' className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow' />
+        <textarea onChange={handleInput}  placeholder='Input Text to Translate' className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow' />
         <div className='my-5'>
           <select id="languages" value={selectedLanguage} onChange={handleSelect}
             className='border border-gray-300 text-sm text-[#353740] rounded-md outline-[#10a37f] block w-80 mb-4 p-2.5 '
@@ -80,7 +81,7 @@ export default function Home() {
           </button>
         </div>
         {output && (
-          <textarea value={output} className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow mb-5' />
+          <textarea defaultValue={output} className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow mb-5' />
         )}
        
         <button onClick={handleCopyText} className='p-2.5 text-center w-80 bg-white border border-gray-300 rounded-md text-[#10a37f] mb-5'>

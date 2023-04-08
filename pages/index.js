@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 
+
 export default function Home() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');

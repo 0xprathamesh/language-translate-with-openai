@@ -1,9 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Multilingual AI
 
-## Getting Started
+This application that uses the OpenAI API to Translate text to different Language based on user input.
 
-First, run the development server:
+Installation To install the app and its dependencies, run the following command:
 
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+To Run the app You need to get OpenAI API key to get it follow [https://platform.openai.com/docs/introduction](https://platform.openai.com/docs/introduction) 
+
+After Completing th above steps Create `.env` file and add Your API key `OPENAI_API_KEY= <your-api-key-here>`
+
+To run the app run the commands:
 ```bash
 npm run dev
 # or
@@ -12,27 +25,16 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# How it Works
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+When you enter a text prompt and click the "Translate" button, the app sends a request to the OpenAI API to Translate text based on the input. The Translated text is then displayed on the screen.
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you find a bug or want to contribute to the project, please feel free to create a pull request or open an issue on Github.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

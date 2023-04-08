@@ -4,7 +4,7 @@ import { languages } from '@/languages';
 import {MdContentCopy} from 'react-icons/md'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Link from 'next/link';
 
 export default function Home() {
   const [input, setInput] = useState('');
@@ -91,7 +91,7 @@ export default function Home() {
 
       </div>
       <div className='text-center'>
-        Made w/ ❤️ by Pr@thamesh
+        Made w/ ❤️ by <Link href='https://github.com/Prathamesh48'>Pr@thamesh</Link>
       </div>
      </section>
     </>

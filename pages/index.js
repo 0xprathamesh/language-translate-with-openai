@@ -82,7 +82,7 @@ export default function Home() {
           </button>
         </div>
         {output && (
-          <textarea  value={output} className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow mb-5' />
+          <textarea defaultValue={output} value={output} className='w-80 appearance-none rounded-md border border-[#10a37f] p-5 outline-[#10a37f] overflow mb-5' />
         )}
        
         <button onClick={handleCopyText} className='p-2.5 text-center w-80 bg-white border border-gray-300 rounded-md text-[#10a37f] mb-5'>
